@@ -7,11 +7,13 @@ let createCounter=(function(){
 
   function changeBy(val) {
     count += val;
+    console.log(count)
   }
 
   return {
     increment(){
-      changeBy(1);
+      let x=changeBy(1);
+     
     },
 
     getCount(){
@@ -24,10 +26,11 @@ let createCounter=(function(){
 
 //const ans=createCounter();
 const ans=createCounter;
-
-console.log(ans.getCount())
+ans.increment();
 ans.increment();
 console.log(ans.getCount())
+
+
 
 
 
