@@ -4,7 +4,7 @@
 
 
 function factorial(n) {
-  // Check for invalid inputs
+ 
   if (typeof n !== 'number' || isNaN(n) || n < 0) {
       console.log("Invalid input");
       return;
