@@ -43,6 +43,4 @@ const sortedCategoryCosts = Object.entries(categoryCosts)
         return acc;
     }, {});
 
-
-
 console.log(sortedCategoryCosts);
