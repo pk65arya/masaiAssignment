@@ -1,0 +1,20 @@
+*{
+  margin:0%;
+  padding: 0%;
+}
+
+#main-title{
+  font-size: 32px;
+  color: darkblue;
+}
+
+#sub-title{
+  font-size: 24px;
+  color: darkgreen;
+}
+
+p{
+  padding: 2px;
+  border: 1px solid lightblue;
+  margin-top: 5px;
+}
