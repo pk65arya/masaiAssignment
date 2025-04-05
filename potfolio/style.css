@@ -1,0 +1,116 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+.header{
+ background-color:#fe6347;
+ position: fixed;
+ width: 100%;
+}
+.header-title{
+  color: #291760;
+ padding-top: 1px;
+  text-align: center;
+}
+  .navbar p {
+    display: inline-block;   
+    margin-right: 20px;       
+    color: aliceblue;
+  }
+  .navbar {
+    padding-top: 10px;   
+    text-align: center;   
+    vertical-align:middle;  
+  }
+
+  .about-me{
+    padding: 20px 10px;
+  }
+  .about-me p{
+    padding-top: 10px;
+    font-size: 18px;
+  }
+
+  .about-me img{
+    height: 200px;
+    width: 200px;
+    padding-top: 20px;
+  }
+
+  .projects{
+  margin-left: 10px
+  }
+  .projetcs-title{
+    border: 2px solid lightgray;
+    margin-top: 10px
+  }
+
+  .projetcs-title >h3{
+    font-size: large;
+    padding: 20px 10px;
+  }
+
+  .projetcs-title h3+div{
+    width: 290px;
+ margin-left: 10px;
+    font-size:large;
+    border: 1px solid lightgray;
+  }
+  .projetcs-title h3+div+p{
+    padding: 10px 10px;
+    font-size: large;
+  }
+  
+  .projetcs-title a{
+    padding-left: 10px;
+    color: blue;
+    font-size: larger;
+  }
+  .projetcs-title a+li{
+    padding-left: 19px;
+    font-size: larger;
+  }
+
+  .projetcs-title li{
+    padding-left:60px;
+  }
+
+ .projetcs-title-2{
+  border: 2px solid lightgray;
+  margin:5px 10px
+ }
+  
+ .projetcs-title-2>h3{
+  font-size: large;
+    padding: 20px 10px;
+ }
+
+ .contact{
+  padding: 10px;
+ }
+
+ .contact div{
+  margin-top: 20px;
+ }
+
+ .contact div input{
+  box-shadow: 2px 2px 2px gray;;
+ }
+
+ .contact div button{
+  width: 60px;
+  font-size: large;
+  border-radius: 5px;
+ }
+
+ .footer{
+  background-color: #fe6347;
+ }
+
+ .footer div{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+ }
+
