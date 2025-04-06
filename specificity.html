@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+/* this will work as specificity of id is higher than class and element so this will work */
+     #special{
+      color: blueviolet;
+    }       
+
+    .highlight{
+      color: red;
+    }
+
+    div{
+        color: blue;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="highlight" id="special">
+    <p>This is a test projects</p>
+  </div>
+</body>
+</html>
