@@ -1,0 +1,65 @@
+/* this is given code */
+/* body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: block;
+  padding: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  border: 1px solid black;
+  margin: -10px;
+  position: absolute;
+}
+
+.text {
+  position: fixed;
+  left: 50%;
+  top: 0;
+} */
+
+
+/*
+
+this is update code
+*/
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: brown;
+  text-align: center;
+}
+
+.container{
+ 
+  display: block;
+  border: 1px solid green;
+  padding: 10px;
+  background: linear-gradient(to right,rgb(119, 119, 246),rgb(234, 116, 116));
+}
+
+.box{
+  border: 1px solid red;
+  margin: 5px;
+  padding:5px;
+   height: 100px;
+   width: 100px;
+ 
+}
+
+.text {
+  position: fixed;
+  font-weight: bolder;
+  left: 50%;
+  
+} 
