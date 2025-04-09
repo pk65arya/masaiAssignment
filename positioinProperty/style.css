@@ -1,0 +1,31 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+ 
+  background:linear-gradient(to right,#8eed8e,#c8cbd8);
+  color: #333;
+}
+
+header{
+  background-color: antiquewhite;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top:0;
+}
+
+main>p{
+  margin: 50px;
+}
+
+footer{
+  background-color: rgb(14, 14, 12);
+  color: white;
+  height: 75px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ 
+  
+}
