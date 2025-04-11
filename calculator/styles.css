@@ -1,0 +1,56 @@
+div#container{
+ width: 40%;
+ margin: auto;
+ text-align: center;
+
+}
+h1{
+  color: rgb(241, 39, 123);
+}
+
+div#inner{
+  width: 40%;
+  height:40vh;
+  background-color: white;
+  box-shadow: 1px 5px 5px  rgb(227, 218, 218);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2px;
+  padding: 40px;
+  margin: auto;
+  align-items: center;
+  font-weight: bold;
+}
+
+div#inner div{
+  border: 2px solid rgb(214, 211, 211);
+  border-radius: 5px;
+  /* margin: 10px; */
+  box-shadow: 1px 5px 5px  rgb(227, 218, 218);
+  padding:10px;
+  text-align: center;
+  background-color: white;
+}
+
+div#disp{
+  height: 15px;
+  grid-area: auto/span 4;
+}
+
+div#inner div#bla{
+  background-color: black ;
+  color: white;
+}
+
+div#inner div#ora{
+  background-color:orangered;
+}
+div#inner div:hover{
+  background-color: aquamarine;
+  color: red
+}
+div#inner div#bla:hover{
+  background-color: aquamarine;
+  color: red
+
+}
