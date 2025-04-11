@@ -1,0 +1,28 @@
+#key{
+  background-color: rgb(60, 50, 50);
+  color: aliceblue;
+  display: grid;
+  gap: 5px
+  ;
+  grid-template-columns: repeat(12,1fr);
+  /* padding:5px */
+
+}
+
+#key div{
+  border:2px solid blue;
+  text-align: center;
+  
+}
+
+div#ent{
+   grid-area:auto/span 2;
+}
+
+div#shi{
+  grid-area: auto/span 2;
+}
+
+div#space{
+  grid-area: auto/span 4;
+}
