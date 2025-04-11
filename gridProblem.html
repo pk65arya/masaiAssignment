@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div#container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+      width: 400px;
+    margin: auto;
+    padding: 10px;
+      grid-template-areas: 'q1 q1 q4' 
+      'q2  q3 q4' '. . q4';
+    }
+    div#container div{
+      background-color: antiquewhite;
+      border: 2px solid;
+      padding: 20px;
+  text-align: center;
+    }
+
+    #first{
+      grid-area:q1 ;
+    }
+
+    #sec{
+      grid-area: q2;
+    }
+
+    #third{
+      grid-area: q3;
+    }
+
+    #fourth{
+      grid-area: q4;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="first">1</div>
+    <div id="sec">2</div>
+    <div id="third">3</div>
+    <div id="fourth">4</div>
+  </div>
+</body>
+</html>
