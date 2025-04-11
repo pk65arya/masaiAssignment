@@ -1,0 +1,23 @@
+body { 
+  background: linear-gradient(to right,rgb(121, 121, 232),rgb(112, 167, 112));
+}
+
+.container{
+  border: 2px solid lightgray;
+  display: flex;
+
+}
+
+.card{
+width: 100%;
+  background-color: black;
+  border: 2px solid green;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 10px;
+}
+
+.card img{
+  border-radius: 50%;
+}
