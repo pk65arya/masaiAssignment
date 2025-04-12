@@ -1,0 +1,46 @@
+Body{
+  margin: 0;
+  padding: 0;
+}
+
+
+div.container{
+  margin: 10px;
+  border-style: dotted;
+  background-color: rgb(254, 254, 97);
+}
+
+div.container .cards{
+  border:2px solid ;
+  display: flex;
+  margin: 10px;
+  background-color: lightgray;
+}
+
+div.container .cards div{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+div.container .cards h2{
+  border: 1px;
+  border-style:dashed;
+}
+
+div.container .cards p{
+  border: 1px;
+  border-style:dashed;
+}
+
+div.container .cards a{
+  border: 1px;
+  border-style:dashed;
+}
+img{
+  margin: 10px;
+  width:200px;
+border-style: dotted;
+padding: 10px;
+}
