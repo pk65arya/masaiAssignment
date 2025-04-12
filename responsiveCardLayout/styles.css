@@ -1,0 +1,50 @@
+div#container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+div#card {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+div#card img{
+  width: 100px;
+}
+
+div#card h3{
+  margin: 0;
+  padding: 5px;
+  color: blue;
+}
+
+div#card p{
+  margin: 0;
+}
+
+div#card  button{
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+div#card  button:hover{
+  background-color: aqua;
+  color: blueviolet;
+}
+
+@media (min-width: 600px) and (max-width: 1024px){
+  div#container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width: 1025px){
+  div#container{
+ 
+    grid-template-columns: repeat(3,1fr);
+  }
+}
