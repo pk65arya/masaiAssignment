@@ -1,0 +1,153 @@
+body{
+  padding: 0px 25px ;
+}
+
+header{
+  background-color:rgb(249, 243, 243);
+  margin: 0;
+  position: sticky;
+  top:0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav div:first-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+nav div:nth-of-type(2){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin: 10px;
+}
+
+nav div:nth-of-type(1) img{
+  width: 200px;
+}
+
+
+main{
+  background-color: rgb(253, 251, 251);
+}
+
+h1{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+section#sec1 >div{
+  display:grid;
+  grid-template-columns: repeat(8,1fr);
+}
+
+section#sec1 >div img{
+  width: 100%;
+}
+
+section#sec1 >div div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section#sec2{
+  display: flex;
+  gap: 10px;
+}
+
+section#sec2 #cards{
+  display:flex;
+  gap: 10px;
+}
+
+section#sec2 #cards img{
+  width: 100%;
+  border-radius:8px ;
+}
+
+section#sec2 #cards img:hover{
+  cursor: pointer;
+}
+
+section#sec3 div#main{
+  background-color: rgb(250, 243, 243);
+}
+
+section#sec3 div#main div:first-child{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  font-weight: lighter;
+  font-style: italic;
+}
+
+section#sec3 div#main div:nth-of-type(2){
+  border: 2px solid;
+  width: fit-content;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(246, 185, 17);
+}
+
+section#sec4{
+  background-color: rgb(250, 243, 243);
+}
+
+/* section#sec4 #container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+section#sec4 #container #inside{
+  display:flex;
+  gap: 20px;
+}
+
+
+section#sec4 #container img{
+  width:100%;
+}
+
+section#sec5 img{
+  width: 100%;
+  height: 300px;
+}
+
+footer{
+  margin-top: 10px;
+  border-top: 2px solid;
+  width: 100vw;
+  background-color: aliceblue;
+}
+
+div#first{
+  display: flex;
+  justify-content: space-around;
+}
+
+div#first img{
+  padding: 20px;
+  width: 200px;
+}
+
+div#first button{
+  margin: 10px;
+  height:40px;
+  width: 200px;
+  background-color: rgb(20, 156, 235);
+  border-radius: 20px;
+}
+
+
