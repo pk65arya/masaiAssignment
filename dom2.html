@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+  </ul>
+
+  <button>Add Item</button>
+</body>
+</html>
+<script>
+  let ul=document.querySelector('ul');
+
+  document.querySelector('button').addEventListener('click',()=>{
+    let ch=document.createElement('li');
+    ch.innerText='New Item';
+
+    let index=ul.children.length+1;
+
+    if(index%2==1){
+      ch.style.fontWeight='bold';
+      ch.style.color='blue';
+    }else{
+      ch.style.fontStyle='italic';
+      ch.style.color='red';
+    }
+    ul.appendChild(ch);
+  })
+</script>
