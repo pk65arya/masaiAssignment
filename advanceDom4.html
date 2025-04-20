@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      max-width: 600px;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    li.completed span {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .task-buttons {
+      margin-top: 15px;
+    }
+
+    .counter {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📝 Task Manager</h2>
+  
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTask">Add Task</button>
+  <button id="sortTasks">Sort A-Z</button>
+
+  <div class="task-buttons">
+    <button data-filter="all">All</button>
+    <button data-filter="completed">Completed</button>
+    <button data-filter="incomplete">Incomplete</button>
+  </div>
+
+  <ul id="taskList"></ul>
+
+  <div class="counter" id="counter"></div>
+
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const addTaskBtn = document.getElementById('addTask');
+    const sortBtn = document.getElementById('sortTasks');
+    const taskList = document.getElementById('taskList');
+    const counterDisplay = document.getElementById('counter');
+    const filterButtons = document.querySelectorAll('[data-filter]');
+
+    let tasks = [];
+    let currentFilter = 'all';
+
+    addTaskBtn.addEventListener('click', () => {
+      const text = taskInput.value.trim();
+      if (text === '') return alert("Please enter a task.");
+
+      tasks.push({ id: Date.now(), text, completed: false });
+      taskInput.value = '';
+      renderTasks();
+    });
+
+
+    sortBtn.addEventListener('click', () => {
+      tasks.sort((a, b) => a.text.localeCompare(b.text));
+      renderTasks();
+    });
+
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentFilter = btn.dataset.filter;
+        renderTasks();
+      });
+    });
+
+    
+    taskList.addEventListener('click', (e) => {
+      const li = e.target.closest('li');
+      if (!li) return;
+      const taskId = +li.dataset.id;
+
+      if (e.target.classList.contains('delete')) {
+        tasks = tasks.filter(t => t.id !== taskId);
+      } else if (e.target.classList.contains('toggle')) {
+        tasks = tasks.map(t =>
+          t.id === taskId ? { ...t, completed: !t.completed } : t
+        );
+      }
+      renderTasks();
+    });
+
+    
+    function renderTasks() {
+      let filteredTasks = tasks;
+
+      if (currentFilter === 'completed') {
+        filteredTasks = tasks.filter(t => t.completed);
+      } else if (currentFilter === 'incomplete') {
+        filteredTasks = tasks.filter(t => !t.completed);
+      }
+
+      taskList.innerHTML = filteredTasks.map(task => `
+        <li data-id="${task.id}" class="${task.completed ? 'completed' : ''}">
+          <span><input type="checkbox" class="toggle" ${task.completed ? 'checked' : ''}> ${task.text}</span>
+          <button class="delete">🗑️</button>
+        </li>
+      `).join('');
+
+      updateCounter();
+    }
+
+
+    function updateCounter() {
+      const total = tasks.length;
+      const completed = tasks.filter(t => t.completed).length;
+      const incomplete = total - completed;
+
+      counterDisplay.textContent = `Total: ${total} | Completed: ${completed} | Incomplete: ${incomplete}`;
+    }
+  </script>
+
+</body>
+</html>
