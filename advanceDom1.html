@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 2px solid;
+    }
+  </style>
+</head>
+<body>
+
+  
+  
+</body>
+</html>
+
+<script>
+ let div= document.createElement('div');
+ let text=document.createElement('p');
+  text.innerText='This is old paragraph.'
+  div.appendChild(text);
+    
+ document.body.append(div);
+
+ let btn=document.createElement('button');
+
+ btn.innerText='Add Paragraph';
+ document.body.append(btn);
+
+ btn.addEventListener("click",()=>{
+  let newP=document.createElement("p");
+  newP.innerText="This is a new Paragraph.";
+  div.appendChild(newP);
+ })
+
+ let btn2=document.createElement("button")
+btn2.innerText='Remove Paragraph';
+
+document.body.append(btn2);
+
+btn2.addEventListener("click",()=>{
+  if(div.lastChild){
+    div.removeChild(div.lastChild);
+  }
+ })
+
+</script>
