@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="outer" style="height: 400px; width: 400px; border: 2px solid;">
+    <button id="btn1" style="margin: 10px;">Div1</button>
+    <div id="middle" style="height: 200px; width: 200px; border: 2px solid; margin: auto;">
+      <button id="btn2" style="margin: 10px;">Div2</button>
+      <div id="inner" style="height: 100px; width: 100px; border: 2px solid; margin: auto;">
+        <button id="btn3" style="margin: 10px;">Div3</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<script>
+  let outer=document.getElementById('outer');
+  let btn1=document.getElementById('btn1');
+
+  outer.addEventListener("click",()=>{
+   
+    alert('outer div');
+  })
+
+  btn1.addEventListener("click",(e)=>{
+   
+    alert('Div1');
+ e.stopPropagation();
+  })
+  
+
+  let middle=document.getElementById('middle');
+  let btn2=document.getElementById('btn2');
+
+  middle.addEventListener("click",(e)=>{
+    alert('middle div')
+     e.stopPropagation();
+  })
+
+  btn2.addEventListener("click",(e)=>{
+    alert('Div2')
+    e.stopPropagation();
+  })
+
+  let inner=document.getElementById('inner');
+  let btn3=document.getElementById('btn3');
+
+  inner.addEventListener("click",(e)=>{
+    alert('inner div')
+    e.stopPropagation();
+
+  })
+
+  btn3.addEventListener("click",(e)=>{
+    alert('Div3')
+    e.stopPropagation();
+  })
+  
+</script>
